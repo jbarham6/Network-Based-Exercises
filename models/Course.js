@@ -1,6 +1,14 @@
-var course = function(course,title,term,instructor){
-    var courseModel = {courseID:course, title:title, term:term, instructor:instructor};
-    return courseModel;
-};
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/courses');
+var Schema = mongoose.Schema;
 
-module.exports.course = course;
+var courseSchema = new Schema({
+    courseID: String,
+    title: String,
+    term: String,
+    instructor: String,
+    startTime: String,
+    endTime: String,
+    email: String
+});
+module.exports = mongoose.model('courses', courseSchema);

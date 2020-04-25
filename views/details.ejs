@@ -13,16 +13,22 @@
             <th>Title</th>
             <th>Term</th>
             <th>Instructor</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Instructor Email</th>
         </tr>
 
         <tr>
-            <% for(var i = 0; i < course.length; i++){ %>
-            <td><%=course[i].courseID%></td>
-            <td><%=course[i].title%></td>
-            <td><%=course[i].term%></td>
-            <td><%=course[i].instructor%></td>
+
+            <td><%=course.courseID%></td>
+            <td><%=course.title%></td>
+            <td><%=course.term%></td>
+            <td><%=course.instructor%></td>
+            <td><%=course.startTime%></td>
+            <td><%=course.endTime%></td>
+            <td><%=course.email%></td>
         </tr>
-            <%}%>
+
 
 
         <tr>
